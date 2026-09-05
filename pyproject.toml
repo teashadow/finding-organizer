@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ferret"
+version = "0.1.0"
+description = "MAD finding organizer"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "click>=8.0",
+  "rich>=13.0",
+  "textual>=0.60",
+]
+
+[project.scripts]
+ferret = "fo.cli:main"
+fo = "fo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
